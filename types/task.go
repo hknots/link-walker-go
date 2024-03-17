@@ -11,10 +11,10 @@ type Task struct {
 	token    string
 }
 
-func NewTask(url string, token string) *Task {
+func NewTask(id string, url string, token string) *Task {
 	return &Task{
 		ID:       uuid.NewString(),
-		Status:   "FETCHING_RESOURCES",
+		Status:   "STARTED_PROCESS",
 		URL:      url,
 		Requests: 0,
 		token:    token,
