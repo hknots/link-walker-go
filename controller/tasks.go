@@ -36,4 +36,5 @@ func PostTask(writer http.ResponseWriter, request *http.Request) {
 	id := uuid.NewString()
 	task := types.NewTask(id, url, token)
 	cache.AddTask(task)
+	go StartTask(task)
 }
